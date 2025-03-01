@@ -16,11 +16,12 @@ function App() {
             <Routes>
               <Route path="/" element={<PrivateRoute />}>
                 <Route path="/" element={<Home />} />
+                <Route path="/basket" element={<Basket />} />
+                <Route path="/sale" element={<Sale />} />
               </Route>
+
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/basket" element={<Basket />} />
-              <Route path="/sale" element={<Sale />} />
             </Routes>
           </BrowserRouter>
         </AuthContextProvider>

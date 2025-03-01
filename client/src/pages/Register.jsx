@@ -29,7 +29,7 @@ export default function Register() {
     if (user) {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   return (
     <div className="text-bg-dark h-100">

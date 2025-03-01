@@ -8,10 +8,7 @@ import { AuthContext } from "../components/AuthContext";
 export default function Login() {
   const user = useContext(AuthContext);
   const navigate = useNavigate();
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
+  const [data, setData] = useState({ email: "", password: "" });
 
   const handleUpdate = e => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -32,7 +29,7 @@ export default function Login() {
     if (user) {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   return (
     <div className="text-bg-dark h-100">

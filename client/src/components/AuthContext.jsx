@@ -13,7 +13,7 @@ export default function AuthContextProvider({ children }) {
     });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="text-center">Loading...</div>;
 
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 }

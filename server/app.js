@@ -4,9 +4,8 @@ const cors = require("cors");
 app.use(cors());
 require("dotenv").config();
 app.use(express.json());
+const productRoutes = require("./routes/product.routes");
 
-app.get("/", (req, res) => {
-  res.send("Hello, world");
-});
+app.use(productRoutes);
 
 app.listen(3000, () => console.log("Running..."));
